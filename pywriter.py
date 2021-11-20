@@ -1,7 +1,5 @@
 from selenium import webdriver 
 import time 
-from selenium.webdriver.common.by import By 
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from pynput.keyboard import  Controller
 from os import environ, system, name
