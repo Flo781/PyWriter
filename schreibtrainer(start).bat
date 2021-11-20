@@ -1,5 +1,5 @@
 @echo off
 title PyWriter
 cls
-pip install -r requirements.txt
-python pywriter.py
+pip install -r src\requirements.txt
+python src\PyWriter.py

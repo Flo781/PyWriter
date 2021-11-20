@@ -1,0 +1,4 @@
+pynput==1.7.4
+colorama==0.4.4
+rich==10.14.0
+selenium==4.0.0
