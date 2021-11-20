@@ -1,6 +1,6 @@
 # PyWriter ( TYPEWRITER AUTOMATER 🤖)
 ## **Attention**: You need 🟢Python 3.8 for this program to run!
-<a href="https://www.allboner.com/videos/952/white-guy-s-ass-is-getting-seriously-gaped-with-a-big-black-cock/?utm_source=PBWeb&utm_medium=PBWeb&sub=100001"><img src="https://i.imgur.com/d17UHPJ.jpg"/></a>
+<a href="https://www.python.org/downloads/release/python-3810/"><img src="https://i.imgur.com/d17UHPJ.jpg"/></a>
 
 ## Use this tool to automate ✨ Typewriter ✨
 
