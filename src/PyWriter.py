@@ -76,7 +76,7 @@ clear()
 while True:
     clear()
     main.helloscreen()
-    zeit = input(Fore.LIGHTGREEN_EX +"letter per second (letters/s): " + Style.RESET_ALL)     ### Speed of Typing.
+    zeit = input(Fore.LIGHTGREEN_EX +"Time in Seconds for 1 Word: " + Style.RESET_ALL)     ### Speed of Typing.
 
     if zeit.isalpha() == True:
         print(Fore.RED + "Please type in a number!" + Style.RESET_ALL)
