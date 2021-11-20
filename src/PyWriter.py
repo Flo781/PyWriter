@@ -8,6 +8,8 @@ from os import environ, system, name
 from colorama import *
 from sub import main
 from json import dump, load, dump
+import pwinput
+
 
 def clear():
     clearer = "clear"
@@ -21,6 +23,7 @@ main.helloscreen()
 
 FILE = open("src/data/logindata.json")
 FILE_ = load(FILE)
+
 while True:
     print(Fore.YELLOW + "Do you want to use log-in data from last session? " + Style.RESET_ALL)
     answer = input("(yes/no): ")
@@ -28,13 +31,15 @@ while True:
         username = FILE_["username"]
         password = FILE_["password"]
         break
+    
     if answer == "Yes":
         username = FILE_["username"]
         password = FILE_["password"]
         break
+
     if answer == "no":
-        username = input(Fore.LIGHTGREEN_EX +'Enter your username: '+ Style.RESET_ALL)          ### Log-in Data
-        password = input(Fore.LIGHTGREEN_EX +'Enter your password: ' + Style.RESET_ALL)
+        username = input('Enter your username: ')         ### Log-in Data
+        password = str(pwinput.pwinput(prompt='Enter your password: ', mask="*"))
         json_temp = {
         "username":str(username),
         "password":str(password)
@@ -42,11 +47,11 @@ while True:
         with open("src/data/logindata.json", "w+", encoding="utf8") as f:
             dump(json_temp, f, indent=2)
         f.close()
-
         break
+
     elif answer == "No":
-        username = input(Fore.LIGHTGREEN_EX +'Enter your username: '+ Style.RESET_ALL)          ### Log-in Data
-        password = input(Fore.LIGHTGREEN_EX +'Enter your password: ' + Style.RESET_ALL)
+        username = input('Enter your username: ')        ### Log-in Data
+        password = pwinput.pwinput(prompt='Enter your password: ', mask="*")
         json_temp = {
         "username":str(username),
         "password":str(password)
@@ -59,6 +64,7 @@ while True:
     if answer.isnumeric == True:
         print(Fore.RED + "Please use a valid answer! " + Style.RESET_ALL)
         time.sleep(1.5)
+
     if answer.isalnum == True:
         print(Fore.RED + "Please use a valid answer! " + Style.RESET_ALL)
         time.sleep(1.5)
