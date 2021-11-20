@@ -21,7 +21,7 @@ def clear():
 clear()
 main.helloscreen()
 
-FILE = open("src/data/logindata.json")
+FILE = open("data/logindata.json")
 FILE_ = load(FILE)
 
 while True:
@@ -76,7 +76,8 @@ clear()
 while True:
     clear()
     main.helloscreen()
-    zeit = input(Fore.LIGHTGREEN_EX +"Time in Seconds for 1 letter: " + Style.RESET_ALL)     ### Speed of Typing.
+    zeit = input(Fore.LIGHTGREEN_EX +"Time in Seconds for 1 Letter: " + Style.RESET_ALL)     ### Speed of Typing.
+    
 
     if zeit.isalpha() == True:
         print(Fore.RED + "Please type in a number!" + Style.RESET_ALL)
