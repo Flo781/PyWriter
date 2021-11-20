@@ -49,7 +49,7 @@ time.sleep(3)
 userlog = drive.find_element_by_id('LoginForm_username')
 passwordlog = drive.find_element_by_id('LoginForm_pw')
 
-###userlog in
+###user log in
 
 userlog.send_keys(user)
 passwordlog.send_keys(password)
