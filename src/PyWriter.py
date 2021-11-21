@@ -1,7 +1,5 @@
 from selenium import webdriver 
 import time 
-from selenium.webdriver.common.by import By 
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver import ActionChains
 from pynput.keyboard import  Controller
 from os import environ, system, name
@@ -76,20 +74,21 @@ clear()
 while True:
     clear()
     main.helloscreen()
-    zeit = input(Fore.LIGHTGREEN_EX +"Time in Seconds for 1 Letter: " + Style.RESET_ALL)     ### Speed of Typing.
+    zeit = input(Fore.LIGHTGREEN_EX +"Time in Seconds for 1 Word: " + Style.RESET_ALL)     ### Speed of Typing.
     
-
     if zeit.isalpha() == True:
         print(Fore.RED + "Please type in a number!" + Style.RESET_ALL)
         time.sleep(2)
         clear()
         main.helloscreen()
-    elif zeit.isnumeric() == False:
-        print(Fore.RED + "Please type in a number!" + Style.RESET_ALL)
-        time.sleep(2)
-        clear()
-        main.helloscreen()
+    
+    
+        
+
+
     else:
+        zeit1= zeit.replace(',','.')
+        print(zeit1)
         break
 
 
@@ -152,9 +151,9 @@ def main():
                 for y in alltext[x]:
                     keyboard.press(y)
                     keyboard.release(y)
-                    time.sleep(int(zeit))
+                    time.sleep(float(zeit1))
 
-        time.sleep(2)
+        time.sleep(float(zeit1))
         print("Level complete")
         driver.back() 
         
