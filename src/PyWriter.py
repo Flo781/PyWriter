@@ -21,7 +21,7 @@ def clear():
 clear()
 main.helloscreen()
 
-FILE = open("data/logindata.json")
+FILE = open("src/data/logindata.json")
 FILE_ = load(FILE)
 
 while True:
