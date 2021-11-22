@@ -153,7 +153,7 @@ def main():
                     keyboard.release(y)
                     time.sleep(float(zeit1))
 
-        time.sleep(float(zeit1))
+        time.sleep(3)
         print("Level complete")
         driver.back() 
         
