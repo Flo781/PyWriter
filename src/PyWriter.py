@@ -81,11 +81,7 @@ while True:
         time.sleep(2)
         clear()
         main.helloscreen()
-    
-    
         
-
-
     else:
         zeit1= zeit.replace(',','.')
         print(zeit1)
