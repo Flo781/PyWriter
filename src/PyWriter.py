@@ -9,6 +9,7 @@ from json import dump, load, dump
 import pwinput
 
 
+
 def clear():
     clearer = "clear"
     if name == "cmd" or "dos":
@@ -18,6 +19,11 @@ def clear():
     system(clearer)
 clear()
 main.helloscreen()
+
+num = 0
+
+
+
 
 FILE = open("src/data/logindata.json")
 FILE_ = load(FILE)
@@ -123,7 +129,7 @@ def main():
         text1c = driver.find_element_by_id('actualLetter')
         text1 = text1c.text
         print(text1)
-        con = ActionChains(driver)
+        
         time.sleep(2)
         ###schreibt
 
@@ -134,20 +140,20 @@ def main():
         keyboard.press(text1)
         keyboard.release(text1)
 
-        ##all text 
+        long = driver.find_element_by_id('amountRemaining')
+        longt =long.text
+        print (longt)
+        
+        for x in range(int(longt)):
+            wri = driver.find_element_by_id('actualLetter')
+            writ = wri.text
+            keyboard.press(writ)
+            keyboard.release(writ)
+            time.sleep(float(zeit1))
+            
 
-        ftextc = driver.find_element_by_id('actualLetter')
-        stextc = driver.find_element_by_id('remainingText')
-        ftext = ftextc.text
-        stext = stextc.text
-        alltext = ftext + stext
-
-
-        for x in range(len(alltext)):
-                for y in alltext[x]:
-                    keyboard.press(y)
-                    keyboard.release(y)
-                    time.sleep(float(zeit1))
+                    
+            
 
         time.sleep(3)
         print("Level complete")
