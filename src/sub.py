@@ -30,7 +30,7 @@ class main:
            /    }~Xi--~  //  \
           Y    Y I\ \    "    Y
           |    | |o\ \        |
-          |    l_l  Y T       |  -Row
+          |    l_l  Y T       |  
           l      "o l_j       !
            \                 /
     ___,.---^.     o       .^---.._____
