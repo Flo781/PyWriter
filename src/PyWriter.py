@@ -20,7 +20,6 @@ def clear():
 clear()
 main.helloscreen()
 
-num = 0
 
 
 
