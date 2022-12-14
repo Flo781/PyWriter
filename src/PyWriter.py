@@ -125,29 +125,31 @@ time.sleep(2)
 
 def main():
     while True:
-        text1c = driver.find_element_by_id('actualLetter')
-        text1 = text1c.text
-        print(text1)
-        
+        keyboard.press('a')
+        keyboard.release('a')
+       
         time.sleep(2)
         ###schreibt
+        text1c = driver.find_element_by_id('text_todo')
+        text1= text1c.text
+        text1l = list(text1)
+        print(text1l[0])
+        
+        time.sleep(3)
 
-        keyboard.press(text1)
-        keyboard.release(text1)
-        time.sleep(1)
-
-        keyboard.press(text1)
-        keyboard.release(text1)
+        keyboard.press(text1l[0])
+        keyboard.release(text1l[0])
 
         long = driver.find_element_by_id('amountRemaining')
         longt =long.text
         print (longt)
         
         for x in range(int(longt)):
-            wri = driver.find_element_by_id('actualLetter')
-            writ = wri.text
-            keyboard.press(writ)
-            keyboard.release(writ)
+            text1c = driver.find_element_by_id('text_todo')
+            text1= text1c.text
+            text1l = list(text1)
+            keyboard.press(text1l[0])
+            keyboard.release(text1l[0])
             time.sleep(float(zeit1))
             
 
