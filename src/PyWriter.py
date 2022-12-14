@@ -135,7 +135,7 @@ def main():
         text1l = list(text1)
         print(text1l[0])
         
-        time.sleep(3)
+        time.sleep(1)
 
         keyboard.press(text1l[0])
         keyboard.release(text1l[0])
