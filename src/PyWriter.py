@@ -1,4 +1,5 @@
 from selenium import webdriver 
+from selenium.webdriver.chrome.service import Service
 import time 
 from selenium.webdriver import ActionChains
 from pynput.keyboard import  Controller
@@ -7,6 +8,15 @@ from colorama import *
 from sub import main
 from json import dump, load, dump
 import pwinput
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,8 +107,10 @@ while True:
 environ['TF_CPP_MIN_LOG_LEVEL'] = '0'
 
 ### Define Chrome-driver.
-driver = webdriver.Chrome("src\chromedriver.exe")
-keyboard = Controller()
+
+
+
+driver = webdriver.Chrome("C:\PyWriter-main\src\chromedriver.exe")
 
 
 
